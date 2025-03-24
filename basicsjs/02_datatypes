@@ -1,0 +1,10 @@
+let age=15
+let Name="Rajesh"
+let command=true
+
+console.log(typeof age);
+console.log(typeof Name);
+console.log(typeof command);
+
+
+// there is more data types but these are in most common in use
