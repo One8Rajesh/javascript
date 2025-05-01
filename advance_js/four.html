@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color:white">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+    
+</body>
+<script>
+    // creating element and apending using function
+    function addlanguage(langname){
+        const li=document.createElement('li');
+        li.innerHTML=`${langname}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addlanguage("python");
+    addlanguage("java");
+
+    // just another way to create element using function but reliable and better way of using this way in big projects
+    function language(langname){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+    }
+    language("mongdb")
+
+    // editing any elements by targeting thier nth child
+    const target=document.querySelector("li:nth-child(2)")
+    target.innerHTML="c-programming"
+
+    // another method to edit a value this is more suitable and reliable way to do
+    const newtarget=document.createElement('li')
+    newtarget.innerHTML="php"
+    target.replaceWith(newtarget)
+
+    // removing elementby targeting
+    const last=document.querySelector("li:last-child")
+    last.remove()
+</script>
+</html>

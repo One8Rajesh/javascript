@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       .header{
+        text-align: center;
+       }
+       p{
+        text-align: center;
+        font-size: 30px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+    .boxes{
+        display: flex;
+        border: 2px solid black;
+        justify-content: center;
+
+    }
+    .box{
+        padding: 55px;
+        margin: 20px;
+        border: 4px solid black;
+    }
+    #grey{
+        background-color: grey;
+    }
+    #pink{
+        background-color: pink;
+
+    }
+    #red{
+        background-color: red;
+    }
+    #green{
+        background-color: green;
+    }
+    </style>
+</head>
+<body>
+    <h1 id="heading" class="header">This  a colour changer game</h1>
+    <p>click on the boxes to change the colour of background</p>
+    <div class="boxes">
+        <div class="box" id="grey">grey</div>
+        <div class="box" id="pink">pink</div>
+        <div class="box" id="red">red</div>
+        <div class="box" id="green">green</div>
+    </div>
+</body>
+<script>
+    const button = document.querySelectorAll('.box');
+    const body = document.querySelector('body');
+    
+    button.forEach(function(buttons) {
+        // console.log(buttons);
+        
+        buttons.addEventListener("click", function(e) { // ✅ add "click" here
+            // console.log(e);
+            // console.log(e.target);
+    
+            if (e.target.id === 'grey') {
+                body.style.backgroundColor = "grey";
+            }
+    
+            // You can add more conditions for other colors:
+            if (e.target.id === 'red') {
+                body.style.backgroundColor = "red";
+            }
+    
+            if (e.target.id === 'green') {
+                body.style.backgroundColor = "green";
+            }
+    
+            if (e.target.id === 'pink') {
+                body.style.backgroundColor = "pink";
+            }
+        });
+    });
+    </script>
+    
+</html>
